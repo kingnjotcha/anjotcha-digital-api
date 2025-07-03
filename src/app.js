@@ -7,6 +7,7 @@ const promotionsRoutes = require('./routes/promotionsRoutes');
 const newsRoutes = require('./routes/newsRoutes');
 const projectRoutes = require('./routes/projectsRoutes');
 
+app.use(cors());
 // After importing your models and sequelize instance
 const sequelize = require('./dbconfig/dbconn');
 sequelize.sync()
@@ -25,7 +26,7 @@ const options = {
 const swaggerSpec = swaggerJsdoc(options);
 
 
-app.use(cors());
+
 
 //swagger docs route
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));

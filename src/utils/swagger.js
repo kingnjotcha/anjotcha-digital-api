@@ -10,6 +10,10 @@ module.exports = {
       url: 'http://localhost:7000/api',
       description: 'Local server',
     },
+    {
+      url: 'https://anjotcha-digital-api.onrender.com/api',
+      description: 'Production server',
+    },
   ],
   components: {
     securitySchemes: {
