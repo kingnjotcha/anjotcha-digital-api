@@ -6,6 +6,8 @@ const servicesRoutes = require('./routes/servicesRoutes');
 const promotionsRoutes = require('./routes/promotionsRoutes');
 const newsRoutes = require('./routes/newsRoutes');
 const projectRoutes = require('./routes/projectsRoutes');
+const pricingRoutes = require('./routes/pricingRoutes');
+const usersRoutes = require('./routes/usersRoutes');
 
 app.use(cors());
 // After importing your models and sequelize instance
@@ -42,7 +44,9 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use('/api/services', servicesRoutes);
 app.use('/api/promotions', promotionsRoutes);
 app.use('/api/news', newsRoutes);
-app.use('/api/projects', projectRoutes)
+app.use('/api/projects', projectRoutes);
+app.use('/api/pricing', pricingRoutes);
+app.use('/api/users', usersRoutes);
 
 // Example route
 app.get('/', (req, res) => {

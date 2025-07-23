@@ -25,8 +25,6 @@ const servicesController = require('../controllers/servicesController');
  *               - name
  *               - description
  *             properties:
- *               serviceId:
- *                 type: integer
  *               name:
  *                 type: string
  *               description:

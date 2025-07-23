@@ -5,7 +5,7 @@ const Service = sequelize.define('Service', {
   serviceId: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    // autoIncrement: true
+    autoIncrement: true
   },
   name: {
     type: DataTypes.STRING,
